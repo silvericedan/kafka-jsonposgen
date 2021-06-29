@@ -29,7 +29,7 @@ public class JsonposgenApplication implements ApplicationRunner {
 	public void run(ApplicationArguments args) throws Exception {
 		for (int i = 0; i<INVOICE_COUNT;i++){
 			producerService.sendMessage(invoiceGenerator.getNextInvoice());
-			Thread.sleep(1000);
+			Thread.sleep(2500);
 		}
 	}
 }
